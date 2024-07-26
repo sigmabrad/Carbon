@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "carbon",
+	"version": "${version}",
+	"name": "Carbon",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/carbon/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"bradhamster.carbon.Carbon"
+		],
+		"client": [
+			"bradhamster.carbon.CarbonClient"
+		]
+	},
+	"mixins": [
+		"carbon.mixins.json",
+		{
+			"config": "carbon.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
